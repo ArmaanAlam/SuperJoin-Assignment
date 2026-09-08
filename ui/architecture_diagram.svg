@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 580" width="100%" height="100%" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3b82f6" flood-opacity="0.25"/>
+    </filter>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="judgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="llm1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0d9488"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ea580c"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Title & Legend -->
+  <text x="40" y="38" font-size="20" font-weight="800" fill="#0f172a" letter-spacing="-0.5">FACT KNOWLEDGE LAYER — SYSTEM REASONING &amp; JUDGMENT ARCHITECTURE</text>
+  <text x="40" y="58" font-size="12" fill="#64748b">End-to-end multi-document fact extraction, vector retrieval, and independent LLM verification flow</text>
+
+  <!-- LEFT: Input Document Cluster -->
+  <g transform="translate(40, 90)">
+    <!-- Section Container -->
+    <rect x="0" y="0" width="160" height="440" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="160" height="36" rx="12" fill="#f1f5f9"/>
+    <text x="80" y="23" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Input Document Cluster</text>
+    <text x="80" y="52" font-size="10" fill="#64748b" text-anchor="middle">Scalable Input: n Documents</text>
+
+    <!-- PDF Cards -->
+    <g transform="translate(20, 70)">
+      <rect x="0" y="0" width="120" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+      <rect x="10" y="10" width="22" height="14" rx="3" fill="#ef4444"/>
+      <text x="21" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">PDF</text>
+      <text x="40" y="22" font-size="12" font-weight="700" fill="#0f172a">PDF 1</text>
+      <text x="12" y="44" font-size="9" fill="#64748b">Doc A (e.g. FY23 10-K)</text>
+    </g>
+
+    <g transform="translate(20, 140)">
+      <rect x="0" y="0" width="120" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+      <rect x="10" y="10" width="22" height="14" rx="3" fill="#ef4444"/>
+      <text x="21" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">PDF</text>
+      <text x="40" y="22" font-size="12" font-weight="700" fill="#0f172a">PDF 2</text>
+      <text x="12" y="44" font-size="9" fill="#64748b">Doc B (e.g. FY24 10-K)</text>
+    </g>
+
+    <g transform="translate(20, 210)">
+      <rect x="0" y="0" width="120" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+      <rect x="10" y="10" width="22" height="14" rx="3" fill="#ef4444"/>
+      <text x="21" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">PDF</text>
+      <text x="40" y="22" font-size="12" font-weight="700" fill="#0f172a">PDF 3</text>
+      <text x="12" y="44" font-size="9" fill="#64748b">Doc C (Press Release)</text>
+    </g>
+
+    <text x="80" y="295" font-size="18" font-weight="800" fill="#94a3b8" text-anchor="middle">⋮</text>
+
+    <g transform="translate(20, 320)">
+      <rect x="0" y="0" width="120" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+      <rect x="10" y="10" width="22" height="14" rx="3" fill="#ef4444"/>
+      <text x="21" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">PDF</text>
+      <text x="40" y="22" font-size="12" font-weight="700" fill="#0f172a">PDF n</text>
+      <text x="12" y="44" font-size="9" fill="#64748b">Doc N (Arbitrary PDF)</text>
+    </g>
+  </g>
+
+  <!-- Connectors: PDFs -> LLM 1 -->
+  <path d="M 200 185 L 240 240" fill="none" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 200 255 L 240 260" fill="none" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 200 325 L 240 280" fill="none" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 200 435 L 240 320" fill="none" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- LLM 1 Processing Cluster -->
+  <g transform="translate(245, 120)">
+    <rect x="0" y="0" width="150" height="380" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="12" y="16" width="126" height="240" rx="10" fill="url(#llm1Grad)" filter="url(#shadow)"/>
+    <text x="75" y="115" font-size="28" fill="#ffffff" text-anchor="middle">⚡</text>
+    <text x="75" y="150" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">LLM 1</text>
+    <text x="75" y="170" font-size="11" font-weight="600" fill="#ffedd5" text-anchor="middle">(Extraction Engine)</text>
+    <text x="75" y="200" font-size="9" fill="#ffedd5" text-anchor="middle">Structured Output &amp;</text>
+    <text x="75" y="215" font-size="9" fill="#ffedd5" text-anchor="middle">Strict Grounding</text>
+
+    <!-- Sub Instances -->
+    <g transform="translate(16, 270)">
+      <rect x="0" y="0" width="118" height="26" rx="6" fill="#ffffff" stroke="#fed7aa"/>
+      <text x="59" y="17" font-size="9" font-weight="600" fill="#9a3412" text-anchor="middle">Worker Pool (N Async)</text>
+    </g>
+    <g transform="translate(16, 305)">
+      <rect x="0" y="0" width="118" height="26" rx="6" fill="#ffffff" stroke="#fed7aa"/>
+      <text x="59" y="17" font-size="9" font-weight="600" fill="#9a3412" text-anchor="middle">Verbatim Offset Verifier</text>
+    </g>
+    <g transform="translate(16, 340)">
+      <rect x="0" y="0" width="118" height="26" rx="6" fill="#ffffff" stroke="#fed7aa"/>
+      <text x="59" y="17" font-size="9" font-weight="600" fill="#9a3412" text-anchor="middle">Atomic Triple Generator</text>
+    </g>
+  </g>
+
+  <!-- Connector: LLM 1 -> Global Knowledge Base -->
+  <path d="M 395 310 L 435 310" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arrow-orange)"/>
+
+  <!-- Global Knowledge & Fact Base -->
+  <g transform="translate(440, 120)">
+    <rect x="0" y="0" width="180" height="380" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="180" height="36" rx="12" fill="#f8fafc"/>
+    <text x="90" y="22" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle">Global Knowledge &amp; Fact Base</text>
+    <text x="90" y="50" font-size="9" fill="#64748b" text-anchor="middle">(Unified Relational &amp; Vector Repo)</text>
+
+    <!-- DB Icons & Content -->
+    <g transform="translate(15, 65)">
+      <rect x="0" y="0" width="150" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <text x="20" y="25" font-size="16">🗄️</text>
+      <text x="45" y="25" font-size="10" font-weight="700" fill="#0f172a">SQL / Postgres DB</text>
+      <text x="45" y="42" font-size="8.5" fill="#64748b">Documents, Chunks, Offsets</text>
+    </g>
+
+    <g transform="translate(15, 135)">
+      <rect x="0" y="0" width="150" height="60" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="20" y="25" font-size="16">📊</text>
+      <text x="45" y="25" font-size="10" font-weight="700" fill="#1e40af">Dynamic Fact Table</text>
+      <text x="45" y="42" font-size="8.5" fill="#3b82f6">(subject, pred, value, time)</text>
+    </g>
+
+    <g transform="translate(15, 205)">
+      <rect x="0" y="0" width="150" height="60" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="20" y="25" font-size="16">🕸️</text>
+      <text x="45" y="25" font-size="10" font-weight="700" fill="#166534">Vector Embeddings</text>
+      <text x="45" y="42" font-size="8.5" fill="#15803d">Dense 384-dim MiniLM Vectors</text>
+    </g>
+
+    <g transform="translate(15, 275)">
+      <rect x="0" y="0" width="150" height="90" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="75" y="20" font-size="9" font-weight="700" fill="#0f172a" text-anchor="middle">Grounding Audit Layer</text>
+      <text x="12" y="38" font-size="8" fill="#475569">✓ Exact Source Text Quote</text>
+      <text x="12" y="52" font-size="8" fill="#475569">✓ Page Number &amp; Chunk Ref</text>
+      <text x="12" y="66" font-size="8" fill="#475569">✓ Char Start / End Offsets</text>
+      <text x="12" y="80" font-size="8" fill="#475569">✓ Fuzzy Substring Repair</text>
+    </g>
+  </g>
+
+  <!-- Dynamic Retrieval Engine (Top Center) -->
+  <g transform="translate(650, 60)">
+    <rect x="0" y="0" width="190" height="75" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="95" y="20" font-size="11" font-weight="800" fill="#0f766e" text-anchor="middle">Dynamic Retrieval Engine</text>
+    <text x="95" y="38" font-size="9" fill="#115e59" text-anchor="middle">Dense Cosine Similarity Filter (T ≥ 0.75)</text>
+    <text x="95" y="56" font-size="8.5" font-weight="700" fill="#0d9488" text-anchor="middle">⚡ Eliminates O(N²) LLM Bottleneck</text>
+  </g>
+
+  <!-- Connectors to Retrieval Engine and LLM 2 -->
+  <path d="M 530 120 L 530 95 L 640 95" fill="none" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow-teal)"/>
+  <path d="M 745 135 L 745 180" fill="none" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 620 310 L 660 310" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- LLM 2: Independent Judge -->
+  <g transform="translate(665, 190)">
+    <rect x="0" y="0" width="160" height="240" rx="14" fill="url(#judgeGrad)" filter="url(#glow)"/>
+    <text x="80" y="50" font-size="32" fill="#ffffff" text-anchor="middle">⚖️</text>
+    <text x="80" y="90" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">LLM 2</text>
+    <text x="80" y="112" font-size="12" font-weight="700" fill="#93c5fd" text-anchor="middle">Independent Judge</text>
+    <text x="80" y="145" font-size="9.5" fill="#dbeafe" text-anchor="middle">Cross-Document Reasoner</text>
+    <text x="80" y="162" font-size="9" fill="#bfdbfe" text-anchor="middle">Contextual Discrepancy</text>
+    <text x="80" y="177" font-size="9" fill="#bfdbfe" text-anchor="middle">Resolution &amp; Synthesis</text>
+    <rect x="15" y="195" width="130" height="28" rx="6" fill="#1e3a8a"/>
+    <text x="80" y="213" font-size="9" font-weight="700" fill="#60a5fa" text-anchor="middle">Confidence Scoring (0-1)</text>
+  </g>
+
+  <!-- Output Connectors from LLM 2 to Results -->
+  <!-- 1. Corroborate (Teal) -->
+  <path d="M 825 240 L 890 200" fill="none" stroke="#0d9488" stroke-width="3" marker-end="url(#arrow-teal)"/>
+  <!-- 2. Contradict (Orange) -->
+  <path d="M 825 290 L 890 280" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <!-- 3. Reconcile (Purple) -->
+  <path d="M 825 350 L 890 360" fill="none" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrow-purple)"/>
+  <!-- 4. Uncertain (Red/Slate) -->
+  <path d="M 745 430 L 745 470 L 890 470" fill="none" stroke="#475569" stroke-width="2.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+
+  <!-- RIGHT: 4 Analysis Output Blocks -->
+  <g transform="translate(900, 170)">
+    <!-- 1. CORROBORATE -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="160" height="60" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" filter="url(#shadow)"/>
+      <rect x="8" y="8" width="85" height="18" rx="4" fill="#0d9488"/>
+      <text x="50" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">CORROBORATE</text>
+      <text x="10" y="42" font-size="11" font-weight="700" fill="#0f172a">Unified Facts Report</text>
+      <text x="10" y="53" font-size="8" fill="#64748b">Cross-verified consensus data</text>
+    </g>
+
+    <!-- 2. CONTRADICT -->
+    <g transform="translate(0, 80)">
+      <rect x="0" y="0" width="160" height="60" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+      <rect x="8" y="8" width="82" height="18" rx="4" fill="#ea580c"/>
+      <text x="49" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">CONTRADICT</text>
+      <text x="10" y="42" font-size="11" font-weight="700" fill="#0f172a">Identified Conflicts</text>
+      <text x="10" y="53" font-size="8" fill="#64748b">Direct factual divergence register</text>
+    </g>
+
+    <!-- 3. RECONCILE -->
+    <g transform="translate(0, 160)">
+      <rect x="0" y="0" width="160" height="60" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+      <rect x="8" y="8" width="75" height="18" rx="4" fill="#7c3aed"/>
+      <text x="45" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">RECONCILE</text>
+      <text x="10" y="42" font-size="11" font-weight="700" fill="#0f172a">Proposed Resolutions</text>
+      <text x="10" y="53" font-size="8" fill="#64748b">Contextual diff (time/unit/scope)</text>
+    </g>
+
+    <!-- 4. UNCERTAIN / FAILURE HANDLING -->
+    <g transform="translate(0, 240)">
+      <rect x="0" y="0" width="160" height="65" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3" filter="url(#shadow)"/>
+      <rect x="8" y="8" width="75" height="18" rx="4" fill="#64748b"/>
+      <text x="45" y="20" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">UNCERTAIN</text>
+      <text x="10" y="42" font-size="10.5" font-weight="700" fill="#0f172a">Metadata &amp; Flagging</text>
+      <text x="10" y="54" font-size="7.5" fill="#64748b">🚩 Low Confidence / Insufficient Info</text>
+      <text x="10" y="63" font-size="7.5" fill="#ef4444">🛡️ Ungrounded Hallucination Rejected</text>
+    </g>
+  </g>
+</svg>
