@@ -83,18 +83,7 @@ python -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000 --reload
 pytest -v
 ```
 
----
 
-## 2. Video Demo
-* **Demo Video Link:** [Watch the 3-minute demo video on Google Drive](https://drive.google.com/file/d/1VaeYOUrVkysO6FdUmCDdvPCnyrORqrM0/view?usp=drive_link) *(Walkthrough showing PDF upload, background ingestion, and the 4 demonstration cases)*
-
-### What the 3-Minute Video Covers:
-1. **0:00 - 0:40 | System Overview & Architecture:** Brief walkthrough of the problem, pipeline components, and non-blocking async architecture.
-2. **0:40 - 1:20 | PDF Ingestion & Fact Extraction:** Live PDF upload, chunking boundary tracking, and verbatim quote + character offset grounding.
-3. **1:20 - 2:30 | The 4 Core Demonstration Cases:** Live visual demonstration of Corroboration, Contradiction, Reconciled by Context, and Fallback Failure Handling.
-4. **2:30 - 3:00 | API & Database Verification:** Swagger docs inspection and database persistence validation.
-
----
 
 ## 3. Approach
 
